@@ -3,13 +3,13 @@ Ceci est une lettre confidentielle
 
 Bob,
 
-De tout temps, l'homme a tenté de comprendre puis de reproduire l'extraordinaire machine qu'est l'être humain. 
+De tout temps, l'homme tente de comprendre puis de reproduire l'extraordinaire machine qu'est l'humain. 
 Les premiers automates nous font sourire aujourd'hui. 
-Les premiers ordinateurs également, mais un peu moins. 
-Et lorsqu'un certain McCullogn, aidé de Pitts, invente en 1943 le premier neurone formel, on ne rigole plus. 
+Les premiers ordinateurs le font auss, mais un peu moins. 
+Et lorsqu'un certain McCullogn invente en 1943 le premier neurone formel, on ne rigole plus. 
 L'ordinateur est devenu capable de reproduire des neurones artificiels. 
 Le "complexe de Frankenstein" va alors freiner les recherches. 
-On commence à entendre parler du concept d'Intelligence Artificielle, plus connu sous les termes d'IA. 
+On entend parler du concept d'Intelligence Artificielle, plus connu sous les termes d'IA. 
 Cela fait peur.
 
 Alice.
