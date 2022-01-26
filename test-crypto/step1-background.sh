@@ -15,7 +15,7 @@ Cela fait peur.
 Alice.
 EOF
 
-cat > script.py <<'EOF'
+cat > symetrique.py <<'EOF'
 # Inspired from https://pythonprogramming.net/encryption-and-decryption-in-python-code-example-with-explanation/
 # PyCrypto docs available at https://www.dlitz.net/software/pycrypto/api/2.6/
 
