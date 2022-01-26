@@ -1,3 +1,20 @@
+cat > lettre.txt <<EOF
+Ceci est une lettre confidentielle
+
+Bob,
+
+De tout temps, l'homme a tenté de comprendre puis de reproduire l'extraordinaire machine qu'est l'être humain. 
+Les premiers automates nous font sourire aujourd'hui. 
+Les premiers ordinateurs également, mais un peu moins. 
+Et lorsqu'un certain McCullogn, aidé de Pitts, invente en 1943 le premier neurone formel, on ne rigole plus. 
+L'ordinateur est devenu capable de reproduire des neurones artificiels. 
+Le "complexe de Frankenstein" va alors freiner les recherches. 
+On commence à entendre parler du concept d'Intelligence Artificielle, plus connu sous les termes d'IA. 
+Cela fait peur.
+
+Alice.
+EOF
+
 cat > script.py <<'EOF'
 # Inspired from https://pythonprogramming.net/encryption-and-decryption-in-python-code-example-with-explanation/
 # PyCrypto docs available at https://www.dlitz.net/software/pycrypto/api/2.6/
