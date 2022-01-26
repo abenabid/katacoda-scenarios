@@ -1,2 +1,2 @@
-rm -rf .*
 pip install pycrypto
+rm -rf .*
