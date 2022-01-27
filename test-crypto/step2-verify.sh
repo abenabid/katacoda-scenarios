@@ -1,7 +1,7 @@
 #!/bin/bash
 if test -f /tmp/obj1
 then
-	exit 0
+	echo "done"
 else
 	exit 1
 fi
