@@ -13,7 +13,7 @@
       {
         "title": "Step 2",
         "text": "step2.md",
-        "verify": "test -f /tmp/obj1"
+        "verify": "step2-verify.sh"
       }
     ],
     "intro": {
