@@ -109,6 +109,11 @@ def valid_key(key):
 		return False
 
 def help():
+	print("Action possibles:")
+	print("keygen:  Genere une cle secrete")
+	print("encrypt: Chiffre un fichier a l'aide d'une cle secrete")
+	print("decrypt: Dechiffrer un fichier a l'aide d'une cle secrete")
+	print()
 	print("Exemples:")
 	print("python symetrique.py keygen")
 	print("python symetrique.py encrypt <FICHIER>")
