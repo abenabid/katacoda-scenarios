@@ -6,8 +6,9 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1",
-        "text": "step1.md"
+        "title": "Truststore",
+        "text": "step1.md",
+        "answer": "step1-answer.md"
       },
       {
         "title": "Step 2",
