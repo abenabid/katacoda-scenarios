@@ -1,3 +1,5 @@
+rm -rf .*
+
 cat > lettre.txt <<EOF
 Bob,
 
@@ -142,6 +144,5 @@ if sys.argv[1] in ["encrypt", "decrypt"]:
 		decrypt_file(file, key)
 EOF
 
-rm -rf .*
 pip install pycrypto
 rm -rf .*
