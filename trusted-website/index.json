@@ -37,6 +37,6 @@
     "uilayout": "editor-terminal"
   },
   "backend": {
-    "imageid": "java7"
+    "imageid": "java9"
   }
 }
