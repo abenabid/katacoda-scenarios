@@ -2,10 +2,9 @@ Afin de vérifier que la signature d'un certificat est authentique, on utilise l
 
 Les éditeurs des systèmes d'exploitation et certain editeurs des navigateurs Web ont regroupé toutes les certifcats des Autorités de Certification auquels ils font confiance dans des "magasins de certificat".
 
-L'environnement Java adopte aussi son propre magasin de certificat appellé Truststore.
+L'environnement Java adopte aussi son propre magasin de certificat appellé Truststore dont le nom de fichier est `cacerts`.
 
 Dans notre exemple, le Truststore est situé au chemin suivant:
-
 `/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/security/cacerts`
 
 Afin de manipuler ce type de fichier, on utilise souvent la commande `keytool`
