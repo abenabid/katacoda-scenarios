@@ -6,13 +6,16 @@
   "details": {
     "steps": [
       {
-        "title": "Truststore",
+        "title": "🛡 Truststore",
         "text": "step1.md",
         "answer": "step1-answer.md"
       },
       {
-        "title": "Step 2",
-        "text": "step2.md"
+        "title": "💻 Application Java",
+        "text": "step2.md",
+        "courseData": "step2-background.sh",
+        "answer": "step2-answer.md",
+        "verify": "step2-verify.sh"
       },
       {
         "title": "Step 3",

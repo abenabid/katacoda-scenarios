@@ -1,0 +1,1 @@
+test -f /home/scrapbook/tutorial/URLConnectionReader.class && echo done;
