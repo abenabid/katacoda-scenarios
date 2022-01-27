@@ -11,14 +11,14 @@
         "answer": "step1-answer.md"
       },
       {
-        "title": "💻 Application Java",
+        "title": "💻 Compiler l'application Java",
         "text": "step2.md",
         "courseData": "step2-background.sh",
         "answer": "step2-answer.md",
         "verify": "step2-verify.sh"
       },
       {
-        "title": "Step 3",
+        "title": "💻 Utiliser l'application Java",
         "text": "step3.md"
       },
       {
