@@ -37,6 +37,6 @@
     "uilayout": "editor-terminal"
   },
   "backend": {
-    "imageid": "centos7"
+    "imageid": "java8"
   }
 }
