@@ -9,7 +9,7 @@ Dans notre exemple, le Truststore est situé au chemin suivant:
 
 Afin de manipuler ce type de fichier, on utilise souvent la commande `keytool`
 
-`keytool -h`{{execute}}
+
 
 ### Objectifs
 
