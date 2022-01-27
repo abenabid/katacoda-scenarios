@@ -15,6 +15,12 @@
         "text": "step2.md",
         "verify": "step2-verify.sh",
         "answer": "step2-answer.md"
+      },
+      {
+        "title": "Chiffrer la lettre",
+        "text": "step3.md",
+        "verify": "step3-verify.sh",
+        "answer": "step3-answer.md"
       }
     ],
     "intro": {
