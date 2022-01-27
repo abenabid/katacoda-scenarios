@@ -25,6 +25,7 @@ cat > symetrique.py <<'EOF'
 
 from Crypto.Cipher import AES
 import base64, os, sys, binascii
+from pathlib import Path
 
 def generate_secret_key_for_AES_cipher():
 	# AES key length must be either 16, 24, or 32 bytes long
@@ -130,6 +131,7 @@ if sys.argv[1] == "keygen":
 	print("\n   Voici votre cle secrete:\n")
 	print("   " + secret_key.decode("utf-8") + "\n" )
 	print("   Ne la perdez pas !\n")
+	Path('/tmp/obj1').touch()
 
 if sys.argv[1] in ["encrypt", "decrypt"]:
 	file = sys.argv[2]
