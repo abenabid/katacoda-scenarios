@@ -18,12 +18,19 @@
         "verify": "step2-verify.sh"
       },
       {
-        "title": "💻 Utiliser l'application Java",
+        "title": "🌐 Utiliser l'application Java",
         "text": "step3.md"
       },
       {
-        "title": "Step 4",
-        "text": "step4.md"
+        "title": "📝 Ajouter un certificat au Trustore",
+        "text": "step4.md",
+        "answer": "step4-answer.md",
+        "verify": "step4-verify.sh"
+      }
+      ,
+      {
+        "title": "✅ Vérifier la prise en compte",
+        "text": "step5.md"
       }
     ],
     "intro": {
