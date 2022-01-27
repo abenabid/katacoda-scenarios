@@ -1,11 +1,12 @@
 cat > lettre.txt <<EOF
+Bob,
+
 Ceci est une lettre confidentielle
 
-Bob,
 
 De tout temps, l'homme tente de comprendre puis de reproduire l'extraordinaire machine qu'est l'humain. 
 Les premiers automates nous font sourire aujourd'hui. 
-Les premiers ordinateurs le font auss, mais un peu moins. 
+Les premiers ordinateurs le font aussi, mais un peu moins. 
 Et lorsqu'un certain McCullogn invente en 1943 le premier neurone formel, on ne rigole plus. 
 L'ordinateur est devenu capable de reproduire des neurones artificiels. 
 Le "complexe de Frankenstein" va alors freiner les recherches. 
@@ -18,9 +19,10 @@ EOF
 cat > symetrique.py <<'EOF'
 # Inspired from https://pythonprogramming.net/encryption-and-decryption-in-python-code-example-with-explanation/
 # PyCrypto docs available at https://www.dlitz.net/software/pycrypto/api/2.6/
+# Made interactive by Hillstone
 
 from Crypto.Cipher import AES
-import base64, os
+import base64, os, sys, binascii
 
 def generate_secret_key_for_AES_cipher():
 	# AES key length must be either 16, 24, or 32 bytes long
@@ -60,22 +62,84 @@ def decrypt_message(encoded_encrypted_msg, encoded_secret_key, padding_character
 	# return a decrypted original private message
 	return unpadded_private_msg
 
+def encrypt_file(file, key):
+	new_file = file + ".encrypted"
+	print("Chiffrement en cours...")
+
+	with open(file) as f:
+		contents = f.read()
+	
+	encrypted_contents = encrypt_message(contents, key, '#')
+
+	with open(new_file, 'w') as f:
+		f.write( encrypted_contents.decode("utf-8") )
+
+	print("Fin du chiffrement")
+	print("Vous trouvez le résultat dans le fichier " + new_file)
+
+def decrypt_file(file, key):
+	new_file = file + ".decrypted"
+	print("Dechiffrement en cours...")
+
+	with open(file) as f:
+		contents = f.read()
+	
+	decrypted_contents = decrypt_message(contents, key, '#')
+
+	with open(new_file, 'w') as f:
+		f.write( decrypted_contents.decode("utf-8") )
+
+
+	print("Fin du dechiffrement")
+	print("Vous trouvez le résultat dans le fichier " + new_file)
+
+def valid_key(key):
+	try:
+		decoded = base64.b64decode(key, validate=True)
+	except binascii.Error:
+		print('base64')
+		return False
+
+	if len(decoded) == 16:
+		return True
+	else:
+		print('len')
+		return False
+
+def help():
+	print("Exemples:")
+	print("python symetrique.py keygen")
+	print("python symetrique.py encrypt <FICHIER>")
+	print("python symetrique.py decrypt <FICHIER>")
 
 ####### BEGIN HERE #######
 
+if len(sys.argv) == 1 or (len(sys.argv) == 2 and sys.argv[1] != "keygen") or (len(sys.argv) == 3 and sys.argv[1] not in ["encrypt", "decrypt"]):
+	help()
+	sys.exit()
 
-private_msg = """
- Lorem ipsum dolor sit amet, malis recteque posidonium ea sit, te vis meliore verterem. Duis movet comprehensam eam ex, te mea possim luptatum gloriatur. Modus summo epicuri eu nec. Ex placerat complectitur eos.
-"""
-padding_character = " "
+if sys.argv[1] == "keygen":
+	secret_key = generate_secret_key_for_AES_cipher()
+	print("\n   Voici votre cle secrete:\n")
+	print("   " + secret_key.decode("utf-8") + "\n" )
+	print("   Ne la perdez pas !\n")
 
-secret_key = generate_secret_key_for_AES_cipher()
-encrypted_msg = encrypt_message(private_msg, secret_key, padding_character)
-decrypted_msg = decrypt_message(encrypted_msg, secret_key, padding_character)
+if sys.argv[1] in ["encrypt", "decrypt"]:
+	file = sys.argv[2]
+	if not os.path.isfile(file):
+		print("Fichier inexistant: " + file)
+		sys.exit()
 
-print("   Secret Key: %s - (%d)" % (str(secret_key), len(secret_key)) )
-print("Encrypted Msg: %s - (%d)" % (encrypted_msg, len(encrypted_msg)) )
-print("Decrypted Msg: %s - (%d)" % (decrypted_msg, len(decrypted_msg)) )
+	key = input("Entrez votre cle secrete: ")
+
+	if not valid_key(key):
+		print("Format de la clé invalide")
+		sys.exit()
+
+	if sys.argv[1] == "encrypt":
+		encrypt_file(file, key)
+	else:
+		decrypt_file(file, key)
 EOF
 
 rm -rf .*
