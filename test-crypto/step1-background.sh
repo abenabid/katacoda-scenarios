@@ -75,7 +75,7 @@ def encrypt_file(file, key):
 		f.write( encrypted_contents.decode("utf-8") )
 
 	print("Fin du chiffrement")
-	print("Vous trouvez le résultat dans le fichier " + new_file)
+	print("Vous trouvez le resultat dans le fichier " + new_file)
 
 def decrypt_file(file, key):
 	new_file = file + ".decrypted"
@@ -91,7 +91,7 @@ def decrypt_file(file, key):
 
 
 	print("Fin du dechiffrement")
-	print("Vous trouvez le résultat dans le fichier " + new_file)
+	print("Vous trouvez le resultat dans le fichier " + new_file)
 
 def valid_key(key):
 	try:
@@ -133,7 +133,7 @@ if sys.argv[1] in ["encrypt", "decrypt"]:
 	key = input("Entrez votre cle secrete: ")
 
 	if not valid_key(key):
-		print("Format de la clé invalide")
+		print("Format de la cle invalide")
 		sys.exit()
 
 	if sys.argv[1] == "encrypt":
