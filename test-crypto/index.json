@@ -11,9 +11,10 @@
         "courseData": "step1-background.sh"
       },
       {
-        "title": "Step 2",
+        "title": "Générer la clé",
         "text": "step2.md",
-        "verify": "step2-verify.sh"
+        "verify": "step2-verify.sh",
+        "answer": "step2-answer.md"
       }
     ],
     "intro": {
