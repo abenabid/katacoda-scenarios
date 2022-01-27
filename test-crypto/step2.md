@@ -2,7 +2,7 @@ Afin de comprendre le fonctionnement de ce script, Alice a décidé de consulter
 
 `python symetrique.py help`{{execute}}
 
-Elle a compris qu'il faut d'abord une clé secrète
+Elle a compris qu'il faut d'abord générer une clé secrète
 
 ### Objectifs
 

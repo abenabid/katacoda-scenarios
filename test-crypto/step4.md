@@ -1,4 +1,4 @@
-Alice a envoyé la clé de chiffrement à Bob par un moyen sécurisé et qu'elle souhaite garder secret.
+Alice a envoyé la clé de chiffrement à Bob par un moyen sécurisé qu'elle souhaite garder secret.
 
 La lettre chiffré peut désormais être envoyé à Bob sans le risque que Charchabil puisse la lire.
 
